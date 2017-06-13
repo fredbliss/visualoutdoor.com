@@ -1,0 +1,262 @@
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 768px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+@mixin backgroundShorthand($imgpath,$position:left top,$repeat: no-repeat) {
+  background: transparent url(#{$imgpath}) $repeat $position;
+  background-size:100% auto;
+}
+
+$blue: #0d3373;
+$darkblue: #000d47;
+$darkblue2: #0b2d66;
+$lightblue: #485ca2;
+$yellow: #fff200;
+$darkyellow: #c7c000;
+$lightyellow: #ffff57;
+
+$bigtext: 1.25em;
+
+body, html{
+  height: 100%;
+  width: 100%;
+  background-color: $blue;
+  color: #fff;
+}
+
+#main .row {
+  margin-bottom: 20px;
+}
+
+.dark-blue {
+  background-color: $darkblue2;
+}
+
+.five-em {
+  font-size: 5em;
+  font-weight: 700;
+  color: $yellow;
+}
+
+.stats h2 {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+.stats {
+  padding: 10px 0px 10px 0px;
+}
+
+.navbar-brand > img {
+  max-height: 24px;
+}
+
+.intro {
+  display: table;
+  text-align: center;
+  @include backgroundShorthand('/files/images/billboard3.jpg', center center);
+  background-size: cover;
+  width: 100%;
+  color: #fff;
+  @include for-tablet-portrait-up {
+    height:100%;
+  }
+}
+
+.intro-body{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+.intro-body h1 {
+  @include for-tablet-landscape-up {
+    font-size: 4em;
+    margin-top: -8%;
+  }
+  @include for-desktop-up {
+    font-size: 4.6em;
+    margin-top: -50px;
+    font-weight: bold;
+  }
+}
+
+.hero,
+.jumbotron {
+  background-color: $darkblue !important;
+  color: #fff;
+}
+
+.jumbotron {
+  margin-bottom: 0px !important;
+}
+
+.header,
+.navbar-default,
+.footer {
+  background-color: $lightblue !important;
+  color: #fff;
+}
+
+.navbar-custom {
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: $darkblue;
+
+  @include for-tablet-portrait-up {
+    .navbar-custom {
+      padding: 20px 0;
+      border-bottom: none;
+      letter-spacing: 1px;
+      background: transparent;
+      -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+      -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+      transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    }
+  }
+}
+
+
+.navbar-custom .navbar-toggle {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+}
+.navbar-custom .navbar-toggle:focus,
+.navbar-custom .navbar-toggle:active {
+  outline: none;
+}
+.navbar-custom .navbar-brand {
+  font-weight: 700;
+}
+.navbar-custom .navbar-brand:focus {
+  outline: none;
+}
+.navbar-custom a {
+  color: white;
+}
+.navbar-custom .nav li a {
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+.navbar-custom .nav li a:hover {
+  color: rgba(255, 255, 255, 0.8);
+  outline: none;
+  background-color: transparent;
+}
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li a:active {
+  outline: none;
+  background-color: transparent;
+}
+.navbar-custom .nav li.active {
+  outline: none;
+}
+.navbar-custom .nav li.active a {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.navbar-custom .nav li.active a:hover {
+  color: white;
+}
+
+.mod_article {
+  padding: 20px 0px 20px 0px;
+}
+
+#hero .mod_article, #stats .mod_article {
+  padding: 0px;
+}
+
+//typography
+p {
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.modal {
+  color: #000;
+}
+
+.big-text {
+  font-size: $bigtext;
+}
+
+.vo-btn {
+  padding: 6px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: $blue;
+  font-size: 2em;
+  font-weight: 700;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius:40px;
+
+}
+
+.vo-btn > a, .vo-btn > a:hover, .vo-btn > a:active, .vo-btn > a:visited {
+  color: $lightyellow;
+  text-decoration: none;
+}
+
+.thumbnail {
+  max-width: 140px;
+}
+
+@include for-tablet-portrait-up {
+  .navbar-custom {
+    padding: 20px 0;
+    border-bottom: none;
+    letter-spacing: 1px;
+    background: transparent;
+    -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+  }
+  .navbar-custom.top-nav-collapse {
+    padding: 0;
+    background: $darkblue;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .nav-default>li {
+    float: left;
+  }
+
+  .nav>li {
+    position: relative;
+    display: block;
+  }
+
+  .navbar-brand > img {
+    max-height: 50px;
+  }
+}
+
+footer {
+  min-height: 200px;
+  text-align: center;
+  background-color: $darkblue;
+  color: #fff;
+}
