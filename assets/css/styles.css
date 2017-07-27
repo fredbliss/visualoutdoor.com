@@ -5842,6 +5842,12 @@ body, html {
 .navbar-brand > img {
   max-height: 24px; }
 
+.inside > .wrapper {
+  margin-top: 30px; }
+  @media (min-width: 768px) {
+    .inside > .wrapper {
+      margin-top: 85px; } }
+
 .intro {
   display: table;
   text-align: center;
@@ -5941,6 +5947,12 @@ body, html {
 .navbar-custom .nav li.active a:hover {
   color: white; }
 
+.nav > li > a {
+  padding: 10px 2px; }
+  @media (min-width: 900px) {
+    .nav > li > a {
+      padding: 10px 15px; } }
+
 .mod_article {
   padding: 20px 0px 20px 0px; }
 
@@ -5971,10 +5983,45 @@ p {
 
 .vo-btn > a, .vo-btn > a:hover, .vo-btn > a:active, .vo-btn > a:visited {
   color: #ffff57;
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
+
+div.static-signage {
+  width: 100%;
+  height: 100%;
+  background: url("/files/images/static-signange.jpg") no-repeat top center;
+  background-size: cover; }
+
+div.digital-signage {
+  width: 100%;
+  height: 100%;
+  background: url("/files/images/digital-signage.jpg") no-repeat top center;
+  background-size: cover; }
+
+div.land-leasing {
+  width: 100%;
+  height: 100%;
+  background: url("/files/images/land-leasing.jpg") no-repeat top center;
+  background-size: cover; }
+
+div.product {
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto; }
+
+div.products-description {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 300px;
+  display: none;
+  color: #fff;
+  cursor: hand; }
+
+div.products-description a.products {
+  color: #fff;
+  line-height: 300px; }
 
 .thumbnail {
-  max-width: 140px; }
+  max-width: 180px; }
 
 @media (min-width: 768px) {
   .navbar-custom {
@@ -5989,13 +6036,18 @@ p {
     padding: 0;
     background: #000d47;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
-  .nav-default > li {
-    float: left; }
+  ul.nav {
+    text-align: center; }
+  ul.nav > li {
+    display: inline-block; }
   .nav > li {
     position: relative;
     display: block; }
   .navbar-brand > img {
     max-height: 50px; } }
+
+figure {
+  padding: 10px; }
 
 footer {
   min-height: 200px;

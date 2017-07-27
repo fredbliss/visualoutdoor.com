@@ -7,8 +7,19 @@ function collapseNavbar() {
     }
 }
 
+function fadeProductImages() {
+
+    $(".product").on("mouseenter", function(){
+        $(this).find('.products-description').fadeIn(400);
+    }).on("mouseleave", function(){
+        $(this).find('.products-description').stop().fadeOut(100);
+    });
+}
+
 $(window).scroll(collapseNavbar);
 $(document).ready(collapseNavbar);
+$(document).ready(fadeProductImages);
+
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
