@@ -5815,11 +5815,16 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-body, html {
+body {
+  position: relative;
   height: 100%;
   width: 100%;
-  background-color: #0d3373;
-  color: #fff; }
+  background-color: #0d3373 !important;
+  color: #fff !important; }
+
+html {
+  height: 100%;
+  width: 100%; }
 
 #main .row {
   margin-bottom: 20px; }
@@ -5841,6 +5846,14 @@ body, html {
 
 .navbar-brand > img {
   max-height: 24px; }
+
+.billboard .wrapper {
+  height: 100%;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.billboard .inside > .wrapper {
+  margin-top: 0px !important; }
 
 .inside > .wrapper {
   margin-top: 30px; }
@@ -5883,10 +5896,18 @@ body, html {
 .jumbotron {
   margin-bottom: 0px !important; }
 
-.header,
-.navbar-default,
-.footer {
-  background-color: #485ca2 !important;
+@media (max-width: 599px) {
+  header {
+    height: 53px; } }
+
+@media (min-width: 768px) {
+  header {
+    height: 77px; } }
+
+header,
+footer,
+.navbar-default {
+  background-color: #000d47 !important;
   color: #fff; }
 
 .navbar-custom {
@@ -5897,7 +5918,6 @@ body, html {
   background-color: #000d47; }
   @media (min-width: 768px) {
     .navbar-custom .navbar-custom {
-      padding: 20px 0;
       border-bottom: none;
       letter-spacing: 1px;
       background: transparent;
@@ -6045,6 +6065,23 @@ div.products-description a.products {
     display: block; }
   .navbar-brand > img {
     max-height: 50px; } }
+
+/*
+#billboards {
+  height:100%;
+
+  app-root {
+    height:100%;
+    min-height:100%;
+  }
+}
+*/
+.si-pointer-bg-top {
+  border-top-color: #0d3373 !important; }
+
+.si-content-wrapper {
+  background-color: #0d3373 !important;
+  color: #fff; }
 
 figure {
   padding: 10px; }
