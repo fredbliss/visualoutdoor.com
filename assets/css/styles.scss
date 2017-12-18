@@ -318,7 +318,7 @@ nav.featured-services {
   color: white;
 }
 .nav > li > a {
-  padding: 10px 2px;
+  padding: 0px 2px;
   @include for-tablet-landscape-up {
     padding: 0px 15px 0px 15px;
   }
@@ -343,6 +343,11 @@ h1 {
 
 h2 {
   color:#FFF200;
+  font-size:24px;
+}
+
+td {
+  padding-bottom: 5px;
 }
 
 .modal {
