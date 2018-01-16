@@ -71,6 +71,10 @@ html{
   background-color: $darkblue2;
 }
 
+.white-text {
+  color: #fff !important;
+}
+
 .odometer {
   font-size: 3em;
   font-weight: 700;
@@ -99,12 +103,10 @@ html{
   max-height: 24px;
 }
 
-.wrapper {
+#contact-us {
+  padding:30px;
+  background-color: $blue;
 
-}
-
-.app {
-  //height:100%;
 }
 
 .billboard {
@@ -487,8 +489,8 @@ div.products-description a.products {
 }
 
 .si-content-wrapper {
-  background-color: #0d3373 !important;
-  color:#fff;
+  /*background-color: #0d3373 !important;*/
+  color:#000;
 }
 
 figure {
