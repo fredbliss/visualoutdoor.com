@@ -20,8 +20,7 @@ var path = {
             ,'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js'
             ,'node_modules/odometer/odometer.js'
             ,'js/*.js'
-        ]
-        ,
+        ]        ,
         sass: 'css/**/*.scss'
         ,css: [
             'css/*.css'
