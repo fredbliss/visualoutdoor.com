@@ -58,6 +58,11 @@ body{
   background: $blue url(/files/images/bg_page.jpg) center -14px repeat-x;
   //background-color: $blue !important;
   color: #fff !important;
+
+  &.inside.map{
+    padding-bottom: auto !important;
+    min-height:100%;
+  }
 }
 
 html{
