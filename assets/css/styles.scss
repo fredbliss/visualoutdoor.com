@@ -52,8 +52,9 @@ $bigtext: 1.25em;
 
 body{
   position:relative;
-  height: 100%;
+  height: auto;
   width: 100%;
+  padding-bottom:150px;
   background: $blue url(/files/images/bg_page.jpg) center -14px repeat-x;
   //background-color: $blue !important;
   color: #fff !important;
@@ -450,6 +451,9 @@ div.products-description a.products {
 .slider-wrapper {
   text-align: center;
 }
+/*.slider-wrapper > * {
+  float:none;
+}*/
 
 .baw-slider {
   width:320px;
@@ -568,13 +572,36 @@ agm-map{
 }
 
 
-figure {
+/*figure {
   padding: 10px;
-}
+}*/
 
 footer {
-  min-height: 200px;
+  width:100%;
+  background-color: $darkblue;
   text-align: center;
   //background-color: $darkblue;
   color: #fff;
+  padding-bottom:20px;
+
+  @include for-phone-only {
+    h3 {
+      font-size: 18px;
+    }
+  }
+
+  @include for-tablet-landscape-up {
+    padding-top:10px;
+  }
+
+  .logo {
+    max-height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+
+    @include for-phone-only{
+      max-height:24px;
+    }
+  }
 }
